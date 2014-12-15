@@ -1,0 +1,51 @@
+<html>
+<head><title>Votes</title></head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<style>
+*{
+font-family: 'Raleway', sans-serif;
+}
+h1{
+font-size:50px;
+}
+#votes{
+float:left;
+width:75px;
+}
+
+</style>
+<body>
+<h1>Votes</h2>
+<p>
+Click an up or down arrow to change the number.
+</p>
+<div id="votes">
+	<div id="voteup">
+	<img src="img/vote/up.jpg" alt="Up" id="up_vote">
+	</div>
+	<div id="votedown">
+	<h1 id="vote1" align="center">0</h1>
+	<img src="img/vote/down.jpg" alt="Down" id="down_vote">
+	</div>
+	</div>
+</body>
+<script>
+var vote_count = 0;
+var downcount = 0;
+
+$( "#up_vote" ).click(function() {
+  vote_count=vote_count+1;
+  $("#vote1").html(vote_count);
+  });
+$( "#down_vote" ).click(function() {
+  vote_count=vote_count-1;
+  $("#vote1").html(vote_count);
+  
+  if(vote_count < 0){
+    vote_count=0;
+    $("#vote1").html(0);
+   }
+  });
+  </script>
+<html>

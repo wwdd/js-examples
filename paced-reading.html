@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>Example</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+div{
+ margin-bottom:10px;
+}
+</style>
+</head>
+<body>
+<h1>Paced Reading Example</h1>
+<p>
+This example uses lorem ipsum text for demonstration purposes. It loads all of the text at first, fades it out and then allows you to read section by section. At the end of the reading, the "Show Text" button disappears.
+</p>
+<hr>
+<hr>
+<div id="test1">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae massa elementum, euismod metus porta, venenatis ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse a gravida ipsum, non semper turpis. Donec eu velit iaculis elit commodo consectetur. Mauris diam diam, viverra ac aliquam nec, blandit ut lectus. Proin interdum, nunc non fringilla pharetra, nunc justo placerat nibh, ut pharetra nisi diam a erat. Donec in leo tempus, porttitor orci nec, semper dolor. Vivamus et facilisis orci. Mauris lobortis ultrices turpis ut fermentum. Nunc fermentum posuere arcu convallis tempus. Pellentesque eu scelerisque eros, vel feugiat nisl.
+</div>
+<div id="test2">
+Vestibulum consequat at dolor in tincidunt. Mauris eget purus in tortor tincidunt tristique. Phasellus et faucibus tortor, sed pulvinar felis. Morbi pretium viverra euismod. Etiam consectetur, orci non facilisis finibus, ligula orci tristique augue, at tincidunt erat ligula id mauris. Integer aliquet quam eu varius consectetur. Phasellus dictum sit amet libero a eleifend. Aliquam eu lectus ut erat posuere pulvinar. Nam tempor ornare enim posuere malesuada. Mauris a feugiat lorem. Cras mattis posuere bibendum. Aenean suscipit, nisi nec faucibus dapibus, enim risus tempor diam, et condimentum tortor lacus eget sapien. Proin luctus odio mi, sodales facilisis purus imperdiet sed. Sed ultricies, mi id lobortis laoreet, leo lectus congue ligula, ac scelerisque eros sem a dolor. Sed tincidunt tellus quis mi finibus, sed lacinia nisi hendrerit.
+</div>
+<div id="test3">
+Morbi sodales porttitor porttitor. Sed sed consectetur lacus, sit amet tempus justo. Aenean tristique, ipsum id volutpat sodales, massa est eleifend est, at auctor ante leo vitae ante. Ut at eros eget mauris pulvinar facilisis in vel neque. In pharetra ipsum elit, vitae facilisis orci malesuada pulvinar. Cras lacinia orci eu dolor tristique lobortis. Nunc viverra et purus id blandit. Duis ac sem sed diam commodo semper a vel arcu. Aenean sapien felis, lobortis eu sapien ut, ultrices lacinia magna. Duis vehicula metus nec viverra scelerisque. Sed posuere tortor nec tortor tristique, et dignissim lectus ultrices.
+</div>
+<div id="test4">
+Mauris eget ligula ac leo ultrices ullamcorper sit amet ultricies ipsum. Donec scelerisque aliquam sem vitae vehicula. Integer sit amet convallis velit, quis elementum enim. Curabitur in massa in metus vehicula imperdiet at ut nisl. Donec quis leo sit amet est egestas vehicula. Nam efficitur, ligula non sollicitudin mattis, velit erat commodo nisi, non tempor ipsum massa non metus. Pellentesque efficitur finibus condimentum. Curabitur in maximus felis. Praesent pulvinar tincidunt lacus, quis blandit est ornare eu. Proin suscipit tristique ipsum ac mollis. Aenean efficitur, sem vel dignissim semper, sapien risus suscipit elit, et lacinia urna enim nec mauris.
+</div>
+<button>Show Text</button>
+<a href="#bottom"></a>
+<script>
+$("div").fadeOut("1000");
+var showall=0;
+$( "button" ).click(function() {
+   showall=showall+1;
+    $('#test'+showall).fadeIn("1000");
+    if(showall == 4){
+     $("button").fadeOut(500);   
+    }
+  return false;
+});
+</script>
+</body>
+</html>
